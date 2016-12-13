@@ -35,7 +35,7 @@ else if ($text == 'ひろぽんの身長') {
 else if ($text == 'ひろぽんの好きな食べ物') {
   $response_format_text = [
      "type" => "text",
-     "text" => "162センチ"
+     "text" => "お寿司"
   ];
 } 
 
