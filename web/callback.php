@@ -23,8 +23,11 @@ if ($text == 'ひろぽんの体重') {
      "type" => "text",
      "text" => "53キロ"
   ];
-} else if ($text == 'いいえ') {
-  exit;
+} else if ($text == 'ひろぽんの身長') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "162.3センチ"
+  ];
 } else if ($text == '違うやつお願い') {
   $response_format_text = [
     "type" => "template",
