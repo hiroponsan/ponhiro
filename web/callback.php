@@ -17,7 +17,6 @@ if($type != "text"){
 	exit;
 }
 
-//返信データ作成
 if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
@@ -25,22 +24,29 @@ if ($text == 'はい') {
   ];
 } 
 
-
-if ($text == 'ひろぽんの体重') {
+//返信データ作成
+else if ($text == 'ひろぽんの体重') {
   $response_format_text = [
      "type" => "text",
      "text" => "53キロ"
   ];
 } 
 
-if ($text == '明日の天気を教えて') {
+
+
+
+
+
+
+
+else if ($text == '明日の天気を教えて') {
   $response_format_text = [
      "type" => "text",
      "text" => "曇りだお"
   ];
 } 
 
-if ($text == 'あなたの今日の運勢') {
+else if ($text == 'あなたの今日の運勢') {
   $response_format_text = [
      "type" => "text",
      "text" => "信じる者にのみ道は開かれる。 Just do it!"
