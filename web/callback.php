@@ -45,84 +45,12 @@ else if ($text == 'ひろぽんの趣味') {
 
 else if ($text == 'ひろぽんクイズ') {
   $response_format_text = [
-     $response_format_text = [
-    "type" => "template",
-    "altText" => "候補を３つご案内しています。",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "●●レストラン",
-            "text" => "これはどーだい？",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "▲▲レストラン",
-            "text" => "これはどーだい？",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=333"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
-            ]
-          ]
-      ]
-    ]
+     "type" => "text",
+     "text" => "ゲーム"
   ];
 }
 
-} else if ($text == '違うやつお願い') {
+} else if ($text == 'ひろぽんクイズ') {
   $response_format_text = [
     "type" => "template",
     "altText" => "候補を３つご案内しています。",
