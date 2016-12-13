@@ -36,7 +36,7 @@ else if ($text == 'ひろぽんの体重') {
 else if ($text == '明日の天気は？') {
   $response_format_text = [
      "type" => "text",
-     "text" => "曇りだお"
+     "text" => "答えはあなたの心の中にある"
   ];
 } 
 
