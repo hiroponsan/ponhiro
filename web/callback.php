@@ -39,6 +39,13 @@ else if ($text == 'ひろぽんの好きな食べ物') {
   ];
 } 
 
+else if ($text == 'ひろぽんの好きなスポーツ') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "テニス"
+  ];
+} 
+
 else if ($text == 'ひろぽんの趣味') {
   $response_format_text = [
      "type" => "text",
