@@ -23,34 +23,21 @@ if ($text == 'ひろぽんの体重') {
      "type" => "text",
      "text" => "53キロ"
   ];
+  
 } else if ($text == 'ひろぽんの身長') {
   $response_format_text = [
      "type" => "text",
      "text" => "162.3センチ"
   ];
 
-  else if ($text == 'ひろぽんの好きな食べ物') {
+  else if ($text == 'ひろぽんの身長') {
   $response_format_text = [
      "type" => "text",
-     "text" => "お寿司"
+     "text" => "162.3センチ"
   ];
 }
 
-else if ($text == 'ひろぽんの趣味') {
-  $response_format_text = [
-     "type" => "text",
-     "text" => "ゲーム"
-  ];
-}
-
-else if ($text == 'ひろぽんクイズ') {
-  $response_format_text = [
-     "type" => "text",
-     "text" => "ゲーム"
-  ];
-}
-
-} else if ($text == 'ひろぽんクイズ') {
+} else if ($text == '違うやつお願い') {
   $response_format_text = [
     "type" => "template",
     "altText" => "候補を３つご案内しています。",
