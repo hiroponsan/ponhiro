@@ -18,10 +18,32 @@ if($type != "text"){
 }
 
 //返信データ作成
+if ($text == 'はい') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。例.今日の天気は？　ひろぽんの体重　あなたの今日の運勢　など"
+  ];
+} 
+
+
 if ($text == 'ひろぽんの体重') {
   $response_format_text = [
      "type" => "text",
      "text" => "53キロ"
+  ];
+} 
+
+if ($text == '今日の天気は？') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "曇りだお"
+  ];
+} 
+
+if ($text == 'あなたの今日の運勢') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "信じる者にのみ道は開かれる"
   ];
 } 
 
