@@ -20,8 +20,36 @@ if($type != "text"){
 //返信データ作成
 if ($text == 'はい') {
   $response_format_text = [
-     "type": "text",
-    "text": "Hello, world"
+    "type" => "template",
+    "altText" => "君は何が欲しいんだ？",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
+      "title" => "○○レストラン",
+      "text" => "これはどーだい？",
+      "actions" => [
+          [
+            "type" => "postback",
+            "label" => "予約する",
+            "data" => "action=buy&itemid=123"
+          ],
+          [
+            "type" => "postback",
+            "label" => "電話する",
+            "data" => "action=pcall&itemid=123"
+          ],
+          [
+            "type" => "uri",
+            "label" => "詳しく見る",
+            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+          ],
+          [
+            "type" => "message",
+            "label" => "違うやつ",
+            "text" => "違うやつお願い"
+          ]
+      ]
+    ]
   ];
 } else if ($text == 'いいえ') {
   exit;
