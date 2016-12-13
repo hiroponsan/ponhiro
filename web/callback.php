@@ -85,7 +85,7 @@ if ($text == 'はい') {
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
             "title" => "▲▲レストラン",
-            "text" => "それともこちら？（２つ目）",
+            "text" => "君は何が欲しいんだ?",
             "actions" => [
               [
                   "type" => "postback",
