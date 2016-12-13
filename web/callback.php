@@ -23,58 +23,78 @@ if ($text == 'ひろぽんの体重') {
      "type" => "text",
      "text" => "53キロ"
   ];
-} else if ($text == 'ひろぽんの身長') {
+} 
+
+else if ($text == 'ひろぽんの身長') {
   $response_format_text = [
      "type" => "text",
      "text" => "162センチ"
   ];
-} else if ($text == '違うやつお願い') {
+} 
+
+else if ($text == 'ひろぽんの好きな食べ物') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "162センチ"
+  ];
+} 
+
+else if ($text == 'ひろぽんの趣味') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "ゲーム"
+  ];
+} 
+
+
+
+else if ($text == 'ひろぽんクイズ') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補を３つご案内しています。",
+    "altText" => "3問あるよ",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "●●レストラン",
-            "text" => "これはどーだい？",
+            "title" => "第１門",
+            "text" => "ヒロポンの口癖は？",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "予約する",
+                  "label" => "肉食いてー",
                   "data" => "action=rsv&itemid=111"
               ],
               [
                   "type" => "postback",
-                  "label" => "電話する",
+                  "label" => "ハラヘッタ",
                   "data" => "action=pcall&itemid=111"
               ],
               [
                   "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
+                  "label" => "ここはどこ？",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "▲▲レストラン",
-            "text" => "これはどーだい？",
+            "title" => "第2門",
+            "text" => "ヒロポンの携帯は？",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "予約する",
+                  "label" => "iPhone７",
                   "data" => "action=rsv&itemid=222"
               ],
               [
                   "type" => "postback",
-                  "label" => "電話する",
+                  "label" => "Android",
                   "data" => "action=pcall&itemid=222"
               ],
               [
                   "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
+                  "label" => "ガラケー",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
