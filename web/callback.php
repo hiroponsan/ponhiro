@@ -101,22 +101,22 @@ else if ($text == 'ひろぽんクイズ') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
+            "title" => "第3問",
+            "text" => "今ひろぽんはどこにいる？",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "予約する",
+                  "label" => "大分県",
                   "data" => "action=rsv&itemid=333"
               ],
               [
                   "type" => "postback",
-                  "label" => "電話する",
+                  "label" => "楽天",
                   "data" => "action=pcall&itemid=333"
               ],
               [
                   "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
+                  "label" => "Amazon",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
