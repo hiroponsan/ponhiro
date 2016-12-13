@@ -20,7 +20,8 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
-     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。例.今日の天気を教えて　ひろぽんの体重　あなたの今日の運勢　など"
+     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。
+     例.今日の天気は？　ひろぽんの体重　あなたの今日の運勢　など"
   ];
 } 
 
@@ -32,14 +33,7 @@ else if ($text == 'ひろぽんの体重') {
   ];
 } 
 
-
-
-
-
-
-
-
-else if ($text == '明日の天気を教えて') {
+else if ($text == '明日の天気は？') {
   $response_format_text = [
      "type" => "text",
      "text" => "曇りだお"
@@ -81,6 +75,29 @@ else if ($text == 'ひろぽんの趣味') {
   ];
 } 
 
+
+else if ($text == 'いいえ') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "はいって言うまで終わらないよ？（はい／いいえ）",
+    "template" => [
+        "type" => "confirm",
+        "text" => "こはいって言うまで終わらないよ？",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "はい"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "いいえ"
+            ]
+        ]
+    ]
+  ];
+} 
 
 
 else if ($text == 'ひろぽんクイズ') {
