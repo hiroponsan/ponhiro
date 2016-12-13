@@ -26,7 +26,7 @@ if ($text == 'はい') {
       "type" => "buttons",
       "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね",
+      "text" => "君は何が欲しいんだ",
       "actions" => [
           [
             "type" => "postback",
