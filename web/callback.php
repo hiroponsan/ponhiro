@@ -24,7 +24,7 @@ if ($text == 'はい') {
     "altText" => "君は何が欲しいんだ？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwihtomxxPDQAhWEWbwKHe0ZC6oQjRwIBw&url=http%3A%2F%2Fxn--t8jxlueo00lrhb8xv63vv8dj18cer4b.com%2F%25E3%2581%258A%25E5%25AC%25A2%25E6%25A7%2598%25E9%2585%25B5%25E7%25B4%25A0%25E3%2581%25AF%25E6%25A5%25BD%25E5%25A4%25A9%25E4%25BB%25A5%25E5%25A4%2596%25E3%2581%25A7%25E8%25B3%25BC%25E5%2585%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%25BB%25E3%2581%2586%25E3%2581%258C%25E5%25BE%2597%25E3%2581%25A3%25E3%2581%25A6%25E6%259C%25AC.html&psig=AFQjCNF5wugkUer9XMD7MWRM9gH01yBeOA&ust=1481696672907399",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
       "title" => "○○レストラン",
       "text" => "これはどーだい？",
       "actions" => [
