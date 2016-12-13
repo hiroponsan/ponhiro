@@ -20,7 +20,8 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
-     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。例.　今日の天気は？　ひろぽんの体重　あなたの今日の運勢　など"
+     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。
+  例.　明日の天気は？　ひろぽんの体重　あなたの運勢　など"
   ];
 } 
 
@@ -39,7 +40,7 @@ else if ($text == '明日の天気は？') {
   ];
 } 
 
-else if ($text == 'あなたの今日の運勢') {
+else if ($text == 'あなたの運勢') {
   $response_format_text = [
      "type" => "text",
      "text" => "信じる者にのみ道は開かれる。 Just do it!"
