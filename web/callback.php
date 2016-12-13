@@ -43,7 +43,7 @@ if ($text == '今日の天気は？') {
 if ($text == 'あなたの今日の運勢') {
   $response_format_text = [
      "type" => "text",
-     "text" => "信じる者にのみ道は開かれる"
+     "text" => "信じる者にのみ道は開かれる。 Just do it!"
   ];
 } 
 
