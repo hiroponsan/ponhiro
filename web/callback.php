@@ -17,28 +17,28 @@ if($type != "text"){
 	exit;
 }
 
-if ($text == 'はい') {
+else if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
      "text" => "何名様ですか？ 例. 4人"
   ];
 } 
 
-if ($text == '2人') {
+else if ($text == '2人') {
   $response_format_text = [
      "type" => "text",
      "text" => "ご予算はいくらですか？ 例. 4000円~6000円"
   ];
 } 
 
-if ($text == '4000円~6000円') {
+else if ($text == '4000円~6000円') {
   $response_format_text = [
      "type" => "text",
      "text" => "メニューはお決まりですか？ 例. お肉"
   ];
 } 
 
-if ($text == 'お肉') {
+else if ($text == 'お肉') {
   $response_format_text = [
   "type" => "template",
     "altText" => "3問あるよ",
@@ -117,7 +117,7 @@ if ($text == 'お肉') {
   ];
 } 
 
-if ($text == 'はい') {
+else if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
      "text" => "何名様ですか？"
