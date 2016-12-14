@@ -69,7 +69,7 @@ else if ($text == 'お肉') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "第2門",
+            "title" => "ステーキ",
             "text" => "ステーキはいかがでしょう？",
             "actions" => [
               [
