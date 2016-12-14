@@ -20,8 +20,107 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
-     "text" => "ヒロポンbotが答えてくれるよ。何でも聞いてみよう。
-  例.　明日の天気は？　ひろぽんの体重　ひろぽんの身長　ひろぽんの趣味　ひろぽんクイズ　あなたの運勢　など"
+     "text" => "何名様ですか？ 例. 4人"
+  ];
+} 
+
+if ($text == '2人') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "ご予算はいくらですか？ 例. 4000円~6000円"
+  ];
+} 
+
+if ($text == '4000円~6000円') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "メニューはお決まりですか？ 例. お肉"
+  ];
+} 
+
+if ($text == 'お肉') {
+  $response_format_text = [
+  "type" => "template",
+    "altText" => "3問あるよ",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "title" => "ハンバーグ",
+            "text" => "ハンバーグはいかがでしょう？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "Webを見る",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "電話して確認する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "第2門",
+            "text" => "ステーキはいかがでしょう？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "Webを見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "電話して確認する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "第3問",
+            "text" => "今ひろぽんはどこにいる？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "大分県",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "楽天",
+                  "data" => "action=pcall&itemid=333"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "Amazon",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ]
+      ]
+    ]
+     
+  ];
+} 
+
+if ($text == 'はい') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "何名様ですか？"
   ];
 } 
 
@@ -179,10 +278,10 @@ else if ($text == 'ひろぽんクイズ') {
 } else {
   $response_format_text = [
     "type" => "template",
-    "altText" => "こんにちわ 何かご用ですか？（はい／いいえ）",
+    "altText" => "レストランのご予約ですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "こんにちわ 何かご用ですか？",
+        "text" => "レストランのご予約ですか？",
         "actions" => [
             [
               "type" => "message",
