@@ -27,11 +27,11 @@ else if ($text == 'はい') {
 else if ($text == '2人') {
   $response_format_text = [
      "type" => "text",
-     "text" => "ご予算はいくらですか？ 例. 4000円~6000円"
+     "text" => "ご予算はいくらですか？ 例. 4000円〜6000円"
   ];
 } 
 
-else if ($text == '4000円~6000円') {
+else if ($text == '4000円〜6000円') {
   $response_format_text = [
      "type" => "text",
      "text" => "メニューはお決まりですか？ 例. お肉"
