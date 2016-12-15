@@ -214,7 +214,7 @@ else if ($text == 'hiropon') {
 
 else if ($text == '000-000-000') {
   $response_format_text = [
-     "type" => "hiropon",
+     "type" => "text",
      "text" => "確認できました。あなたのパスワードは12345です。"
   ];
 } 
