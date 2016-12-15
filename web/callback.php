@@ -384,7 +384,7 @@ else if ($text == 'ひろぽんクイズ') {
     "altText" => "パスワードをお忘れですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "レストランのご予約ですか？",
+        "text" => "パスワードをお忘れですか？",
         "actions" => [
             [
               "type" => "message",
