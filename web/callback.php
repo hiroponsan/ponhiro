@@ -27,7 +27,7 @@ else if ($text == 'はい') {
 else if ($text == '水が欲しい') {
   $response_format_text = [
      "type" => "text",
-     "text" => "水ですね！　ご予算はいくらでしょうか？ 例. 100〜500円"
+     "text" => "水ですね！　ご予算はいくらでしょうか？ 例. 100円〜500円"
   ];
 } 
 
