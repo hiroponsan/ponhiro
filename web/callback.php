@@ -24,6 +24,13 @@ else if ($text == 'はい') {
   ];
 } 
 
+else if ($text == '水が欲しい') {
+  $response_format_text = [
+     "type" => "text",
+     "text" => "水ですね！　ご予算はいくらでしょうか？ 例. 100〜500円"
+  ];
+} 
+
 else if ($text == '2人') {
   $response_format_text = [
      "type" => "text",
@@ -31,14 +38,93 @@ else if ($text == '2人') {
   ];
 } 
 
-else if ($text == '4000円〜6000円') {
+else if ($text == '5000円〜6000円') {
   $response_format_text = [
      "type" => "text",
      "text" => "メニューはお決まりですか？ 例. お肉"
   ];
 } 
 
-else if ($text == 'お肉') {
+else if ($text == '100円〜500円') {
+  $response_format_text = [
+  "type" => "template",
+    "altText" => "水になります",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "title" => "クリスタルガーザー",
+            "text" => "こちらはいかがでしょう？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "Webを見る",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "購入する",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "電話して確認する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "いろはす",
+            "text" => "こちらはいかがでしょう？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "Webを見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "購入する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "電話して確認する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "第3問",
+            "text" => "今ひろぽんはどこにいる？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "大分県",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "楽天",
+                  "data" => "action=pcall&itemid=333"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "Amazon",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ]
+      ]
+    ]
+     
+  ];
+} 
+
+else if ($text == '水') {
   $response_format_text = [
   "type" => "template",
     "altText" => "3問あるよ",
@@ -116,6 +202,7 @@ else if ($text == 'お肉') {
      
   ];
 } 
+
 
 else if ($text == 'はい') {
   $response_format_text = [
