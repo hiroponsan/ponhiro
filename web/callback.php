@@ -206,7 +206,7 @@ else if ($text == 'はい') {
 
 else if ($text == 'hiropon') {
   $response_format_text = [
-     "type" => "hiropon",
+     "type" => "text",
      "text" => "hiroponさんですね。本人確認のため、電話番号を入力してください。"
   ];
 } 
