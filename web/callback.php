@@ -207,9 +207,25 @@ else if ($text == '水') {
 else if ($text == 'はい') {
   $response_format_text = [
      "type" => "text",
-     "text" => "何名様ですか？"
+     "text" => "アカウント名を教えてください"
   ];
 } 
+
+else if ($text == 'はい') {
+  $response_format_text = [
+     "type" => "hiropon",
+     "text" => "hiroponさんですね。本人確認のため、電話番号を入力してください。"
+  ];
+} 
+
+
+else if ($text == '000-000-000') {
+  $response_format_text = [
+     "type" => "hiropon",
+     "text" => "確認できました。あなたのパスワードは12345です。"
+  ];
+} 
+
 
 //返信データ作成
 else if ($text == 'ひろぽんの体重') {
@@ -365,7 +381,7 @@ else if ($text == 'ひろぽんクイズ') {
 } else {
   $response_format_text = [
     "type" => "template",
-    "altText" => "レストランのご予約ですか？（はい／いいえ）",
+    "altText" => "パスワードをお忘れですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
         "text" => "レストランのご予約ですか？",
