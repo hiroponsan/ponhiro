@@ -17,13 +17,6 @@ if($type != "text"){
 	exit;
 }
 
-else if ($text == 'はい') {
-  $response_format_text = [
-     "type" => "text",
-     "text" => "何名様ですか？ 例. 4人"
-  ];
-} 
-
 else if ($text == '水が欲しい') {
   $response_format_text = [
      "type" => "text",
