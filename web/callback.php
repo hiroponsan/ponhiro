@@ -172,7 +172,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/402445/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/408935/"
               ]
             ]
           ],
