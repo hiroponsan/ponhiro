@@ -34,19 +34,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=rsv&itemid=111"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=pcall&itemid=111"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/405616/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -56,19 +56,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177417/?l-id=cpn_201611rank_top5_02"
+                  "data" => "action=rsv&itemid=222"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "data" => "http://video.rakuten.co.jp/content/177417/?l-id=cpn_201611rank_top5_02"
+                  "data" => "action=pcall&itemid=222"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/304311/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -116,7 +116,6 @@ else if ($text == 'ランキング') {
               ]
             ]
           ],
-
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
             "title" => "5位 デットプール",
@@ -134,8 +133,8 @@ else if ($text == 'ランキング') {
               ],
               [
                   "type" => "uri",
-                  "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
+                  "label" => "購入する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ]
@@ -172,7 +171,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/408935/"
+                  "uri" => "http://video.rakuten.co.jp/content/203761/?l-id=home_slider01"
               ]
             ]
           ],
@@ -194,12 +193,12 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/403485/"
+                  "uri" => "http://video.rakuten.co.jp/content/206271/"
               ]
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_3.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/intern.jpg",
             "title" => "スター・トリック",
             "text" => "価格：432円〜",
             "actions" => [
@@ -211,40 +210,18 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "特集ページを見る",
-                  "uri" => "http://video.rakuten.co.jp/special/startrekbeyond/?l-id=home_slider03"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/403484/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_4.png",
-            "title" => "森山教習所",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
                   "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/402445/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.jpg",
-            "title" => "本当に良き時代",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-4.jpg",
+            "title" => "4位 007スペクター",
             "text" => "価格：432円〜",
             "actions" => [
               [
@@ -260,7 +237,29 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/405616/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
+            "title" => "5位 デットプール",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "告知を見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "Webで詳細を見る",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ]
