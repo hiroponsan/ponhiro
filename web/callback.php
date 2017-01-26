@@ -155,7 +155,7 @@ else if ($text == 'え') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "家族1.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/家族1.png",
             "title" => "アングリーバード",
             "text" => "価格：432円〜",
             "actions" => [
@@ -177,7 +177,7 @@ else if ($text == 'え') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "家族2.png",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/家族2.png",
             "title" => "ドラえもん",
             "text" => "価格：432円〜",
             "actions" => [
