@@ -36,12 +36,12 @@ else if ($text == 'ランキング') {
               [
                   "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "http://video.rakuten.co.jp/content/180421/"
+                  "uri" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
                   "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "http://video.rakuten.co.jp/content/180421/"
+                  "uri" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
                   "type" => "uri",
