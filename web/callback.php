@@ -223,28 +223,7 @@ else if ($text == 'ひろぽんクイズ') {
       ]
     ]
   ];
-} else {
-  $response_format_text = [
-    "type" => "template",
-    "altText" => "パスワードをお忘れですか？（はい／いいえ）",
-    "template" => [
-        "type" => "confirm",
-        "text" => "パスワードをお忘れですか？",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "はい",
-              "text" => "はい"
-            ],
-            [
-              "type" => "message",
-              "label" => "いいえ",
-              "text" => "いいえ"
-            ]
-        ]
-    ]
-  ];
-}
+} 
 
 $post_data = [
 	"replyToken" => $replyToken,
