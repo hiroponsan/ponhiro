@@ -34,19 +34,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "告知を見る",
-                  "data" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=rsv&itemid=111"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "data" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=pcall&itemid=111"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/304311/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
