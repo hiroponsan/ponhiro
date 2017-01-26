@@ -51,7 +51,7 @@ else if ($text == 'オススメTOP5') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "http://prod.akimg.video.rakuten.co.jp/content/48/99/178499/main.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/star.jpg",
             "title" => "2位 スターウォーズ",
             "text" => "価格：432円〜",
             "actions" => [
