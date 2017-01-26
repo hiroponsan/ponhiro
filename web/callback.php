@@ -135,27 +135,7 @@ else if ($text == 'ランキング') {
                   "type" => "uri",
                   "label" => "購入する",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ],
-       [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/more.jpg",
-            "title" => "",
-            "text" => "",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "他の商品を探す",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "キャンペーンを見る",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              
+              ]
             ]
           ]
       ]
