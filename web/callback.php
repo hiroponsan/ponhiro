@@ -145,7 +145,7 @@ else if ($text == 'ランキング') {
   ];
 } 
 
-else if ($text == 'シチュエーション別') {
+else if ($text == 'え') {
   $response_format_text = [
   "type" => "template",
     "altText" => "家族で
