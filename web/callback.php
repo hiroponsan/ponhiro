@@ -29,7 +29,7 @@ else if ($text == 'オススメTOP5') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "ode.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ode.jpg",
             "title" => "1位 オデッセイ",
             "text" => "価格：432円〜",
             "actions" => [
@@ -51,7 +51,7 @@ else if ($text == 'オススメTOP5') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "2.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/2.jpg",
             "title" => "2位 スターウォーズ",
             "text" => "価格：432円〜",
             "actions" => [
@@ -73,7 +73,7 @@ else if ($text == 'オススメTOP5') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "3.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/3.jpg",
             "title" => "3位 マイ・インターン",
             "text" => "価格：432円〜",
             "actions" => [
