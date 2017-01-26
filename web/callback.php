@@ -147,9 +147,14 @@ else if ($text == 'ランキング') {
                   "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "他の商品を探す",
-                  "uri" => "http://video.rakuten.co.jp/"
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "キャンペーンを見る",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               
             ]
           ]
