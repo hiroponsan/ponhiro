@@ -194,7 +194,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/408935/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/403485/"
               ]
             ]
           ],
@@ -216,7 +216,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/403485/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/403484/"
               ]
             ]
           ],
@@ -243,8 +243,8 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
-            "title" => "5位 デットプール",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.png",
+            "title" => "本当に良き時代",
             "text" => "価格：432円〜",
             "actions" => [
               [
@@ -260,7 +260,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/405616/"
               ]
             ]
           ]
