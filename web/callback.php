@@ -116,7 +116,7 @@ else if ($text == 'ランキング') {
               ]
             ]
           ],
-          
+
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
             "title" => "5位 デットプール",
@@ -134,8 +134,8 @@ else if ($text == 'ランキング') {
               ],
               [
                   "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "label" => "ランキングをもっと見る",
+                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
               ]
             ]
           ]
@@ -221,24 +221,24 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-4.jpg",
-            "title" => "4位 007スペクター",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_4.png",
+            "title" => "森山教習所",
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/402445/"
               ]
             ]
           ],
