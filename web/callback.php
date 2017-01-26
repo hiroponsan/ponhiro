@@ -116,7 +116,8 @@ else if ($text == 'ランキング') {
               ]
             ]
           ],
-            [
+          
+          [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
             "title" => "5位 デットプール",
             "text" => "価格：432円〜",
@@ -130,29 +131,6 @@ else if ($text == 'ランキング') {
                   "type" => "postback",
                   "label" => "Webで詳細を見る",
                   "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
-            ]
-          ],
-
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/more.jpg",
-            "title" => "",
-            "text" => "",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "他の商品を探す",
-                  "uri" => "http://video.rakuten.co.jp/"
               ],
               [
                   "type" => "uri",
