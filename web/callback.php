@@ -243,8 +243,8 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.png",
-            "title" => "本当に良き時代",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
+            "title" => "5位 デットプール",
             "text" => "価格：432円〜",
             "actions" => [
               [
