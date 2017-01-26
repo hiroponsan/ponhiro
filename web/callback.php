@@ -29,7 +29,7 @@ else if ($text == 'オススメTOP5') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "1.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "ode.jpg",
             "title" => "1位 オデッセイ",
             "text" => "価格：432円〜",
             "actions" => [
