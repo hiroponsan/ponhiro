@@ -34,19 +34,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=111"
+                  "data" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=111"
+                  "data" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/304311/"
               ]
             ]
           ],
@@ -56,19 +56,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "action=rsv&itemid=222"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/177417/"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/299730/"
               ]
             ]
           ],
@@ -123,19 +123,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/192912/"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/192912/"
               ],
               [
                   "type" => "uri",
                   "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/368478/"
               ]
             ]
           ]
@@ -194,7 +194,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/408935/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/403485/"
               ]
             ]
           ],
@@ -216,7 +216,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/403485/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/403484/"
               ]
             ]
           ],
@@ -243,24 +243,24 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.jpg",
             "title" => "5位 デットプール",
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/207263/?l-id=home_slider05"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/207263/?l-id=home_slider05"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/405616/"
               ]
             ]
           ]
