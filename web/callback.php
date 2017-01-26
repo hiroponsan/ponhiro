@@ -147,7 +147,7 @@ else if ($text == 'ランキング') {
 else if ($text == 'オススメ') {
   $response_format_text = [
   "type" => "template",
-    "altText" => "ランキング
+    "altText" => "ランキングオススメだよー
 
     ",
     "template" => [
@@ -159,36 +159,14 @@ else if ($text == 'オススメ') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=111"
+                  "uri" => "http://video.rakuten.co.jp/content/203761/?l-id=home_slider01"
               ],
               [
                   "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_2.png",
-            "title" => "インフェルノ",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/203761/?l-id=home_slider01"
               ],
               [
                   "type" => "uri",
@@ -198,8 +176,30 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_2.png",
+            "title" => "インフェルノ",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "uri",
+                  "label" => "告知を見る",
+                  "uri" => "http://video.rakuten.co.jp/content/206271/"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "特集ページを見る",
+                  "uri" => "http://video.rakuten.co.jp/special/inferno/?l-id=home_slider02"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "http://video.rakuten.co.jp/content/206271/"
+              ]
+            ]
+          ],
+          [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/intern.jpg",
-            "title" => "3位 マイ・インターン",
+            "title" => "スター・トリック",
             "text" => "価格：432円〜",
             "actions" => [
               [
@@ -208,14 +208,14 @@ else if ($text == 'オススメ') {
                   "data" => "action=rsv&itemid=222"
               ],
               [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "type" => "uri",
+                  "label" => "特集ページを見る",
+                  "uri" => "http://video.rakuten.co.jp/special/startrekbeyond/?l-id=home_slider03"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/content/206270/"
               ]
             ]
           ],
