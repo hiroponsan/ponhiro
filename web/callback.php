@@ -145,6 +145,133 @@ else if ($text == 'ランキング') {
   ];
 } 
 
+else if ($text == 'シチュエーション別') {
+  $response_format_text = [
+  "type" => "template",
+    "altText" => "家族で
+
+    ",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "家族1.png",
+            "title" => "アングリーバード",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "告知を見る",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "Webで詳細を見る",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "家族2.png",
+            "title" => "ドラえもん",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "告知を見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "Webで詳細を見る",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/intern.jpg",
+            "title" => "3位 マイ・インターン",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "uri",
+                  "label" => "告知を見る",
+                  "uri" => "http://video.rakuten.co.jp/content/166188/2"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "Webで詳細を見る",
+                  "uri" => "http://video.rakuten.co.jp/content/166188/"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "http://video.rakuten.co.jp/basket/add/293958/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-4.jpg",
+            "title" => "4位 007スペクター",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "告知を見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "Webで詳細を見る",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "購入する",
+                  "uri" => "http://video.rakuten.co.jp/basket/add/299721/"
+              ]
+            ]
+          ],
+
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
+            "title" => "5位 デットプール",
+            "text" => "価格：432円〜",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "告知を見る",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "Webで詳細を見る",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "ランキングをもっと見る",
+                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
+              ]
+            ]
+          ]
+      ]
+    ]
+     
+  ];
+} 
+
+
 else if ($text == 'オススメ') {
   $response_format_text = [
   "type" => "template",
