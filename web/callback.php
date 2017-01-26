@@ -46,7 +46,7 @@ else if ($text == 'ランキング') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/304311/"
+                  "uri" => "http://video.rakuten.co.jp/basket/delete/405616/"
               ]
             ]
           ],
@@ -68,7 +68,7 @@ else if ($text == 'ランキング') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/299730/"
+                  "uri" => "http://video.rakuten.co.jp/basket/delete/304311/"
               ]
             ]
           ],
@@ -90,7 +90,7 @@ else if ($text == 'ランキング') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/293958/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -112,7 +112,7 @@ else if ($text == 'ランキング') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/299721/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
