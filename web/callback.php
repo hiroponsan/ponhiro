@@ -34,19 +34,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=rsv&itemid=111"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/180421/"
+                  "data" => "action=pcall&itemid=111"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/405616/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -56,19 +56,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177417/?l-id=cpn_201611rank_top5_02"
+                  "data" => "action=rsv&itemid=222"
               ],
               [
-                  "type" => "uri",
+                  "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177417/?l-id=cpn_201611rank_top5_02"
+                  "data" => "action=pcall&itemid=222"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => ""
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -243,7 +243,7 @@ else if ($text == 'オススメ') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.png",
             "title" => "本当に良き時代",
             "text" => "価格：432円〜",
             "actions" => [
@@ -260,7 +260,7 @@ else if ($text == 'オススメ') {
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/delete/403484/"
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ]
