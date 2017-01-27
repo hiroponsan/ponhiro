@@ -100,14 +100,14 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/177408/"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/177408/"
               ],
               [
                   "type" => "uri",
@@ -123,14 +123,14 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                 "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/192912/"
               ],
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/192912/"
               ],
               [
                   "type" => "uri",
@@ -331,9 +331,9 @@ else if ($text == 'オススメ') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/special/startrekbeyond/?l-id=home_slider03"
               ],
               [
                   "type" => "uri",
@@ -375,14 +375,14 @@ else if ($text == 'オススメ') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/207263/"
               ],
               [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                 "type" => "uri",
+                  "label" => "告知を見る",
+                  "uri" => "http://video.rakuten.co.jp/content/207263/"
               ],
               [
                   "type" => "uri",
