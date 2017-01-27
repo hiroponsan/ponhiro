@@ -34,19 +34,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=111"
+                  "uri" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
                   "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=111"
+                  "data" => "http://video.rakuten.co.jp/content/180421/"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/304311/"
               ]
             ]
           ],
@@ -56,19 +56,19 @@ else if ($text == 'ランキング') {
             "text" => "価格：432円〜",
             "actions" => [
               [
-                  "type" => "postback",
+                  "type" => "uri",
                   "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
+                  "uri" => "http://video.rakuten.co.jp/content/177417/"
               ],
               [
                   "type" => "postback",
                   "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
+                  "data" => "http://video.rakuten.co.jp/content/177417/"
               ],
               [
                   "type" => "uri",
                   "label" => "購入する",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "uri" => "http://video.rakuten.co.jp/basket/add/299730/"
               ]
             ]
           ],
