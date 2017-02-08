@@ -32,7 +32,7 @@ function getRakutenResult($keyword, $min_price) {
 $baseurl = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
 // リクエストのパラメータ作成
 $params = array();
-$params['applicationId'] = '[自分のアプリID]'; // アプリID
+$params['applicationId'] = '1083496527718799233'; // アプリID
 $params['keyword'] = urlencode_rfc3986($keyword); // 任意のキーワード。※文字コードは UTF-8
 $params['sort'] = urlencode_rfc3986('+itemPrice'); // ソートの方法。※文字コードは UTF-8
 $params['minPrice'] = $min_price; // 最低価格
