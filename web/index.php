@@ -30,7 +30,7 @@ $API_BASE_URL   = "http://api.rakuten.co.jp/rws/1.3/rest";
 $OPERATION      = "ItemSearch";
 
 //バージョン
-$API_VERSION    = "2007-04-11";
+$API_VERSION    = "2007-02-14";
 
 //--------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
