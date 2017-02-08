@@ -11,7 +11,7 @@
 
 // 自分のディベロッパーID
 
-$DEVELOPER_ID = "1083496527718799233";
+$applicationId = "1083496527718799233";
 
 //自分のアフィリエイトID
 
@@ -24,7 +24,7 @@ $AFFILIATE_ID = "14cb636d.7f06eac6.14cb636e.3ca232c6";
 $API_NAME       = "楽天商品検索API";
 
 // APIのURL
-$API_BASE_URL   = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?";
+$API_BASE_URL   = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222";
 
 //オペレーション名
 $OPERATION      = "ItemSearch";
@@ -35,11 +35,11 @@ $API_VERSION    = "2014-02-22";
 //--------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
 // リクエストURL生成
-$api_url = sprintf("%s?developerId=%s&affiliateId=%s&operation=%s",$API_BASE_URL,$DEVELOPER_ID,$AFFILIATE_ID,$OPERATION);
+$api_url = sprintf("%s?applicationId=%s&",$API_BASE_URL,$DEVELOPER_ID,$AFFILIATE_ID);
 
 //APIへのパラメタの連想配列
 $api_params          = array(
-    "keyword"        => "餃子",
+    "keyword"        => "",
     "version"        => $API_VERSION,
     "shopCode"       => "",
     "genreId"        => "",
