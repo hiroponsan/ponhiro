@@ -35,7 +35,7 @@ $API_VERSION    = "2014-02-22";
 //--------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
 // リクエストURL生成
-$api_url = sprintf("https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?applicationId=%s&");
+$api_url = sprintf("https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?applicationId=1083496527718799233");
 
 //APIへのパラメタの連想配列
 $api_params          = array(
