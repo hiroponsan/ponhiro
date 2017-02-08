@@ -24,13 +24,13 @@ $AFFILIATE_ID = "14cb636d.7f06eac6.14cb636e.3ca232c6";
 $API_NAME       = "楽天商品検索API";
 
 // APIのURL
-$API_BASE_URL   = "http://api.rakuten.co.jp/rws/1.3/rest";
+$API_BASE_URL   = "http://api.rakuten.co.jp/rws/4.0/rest";
 
 //オペレーション名
 $OPERATION      = "ItemSearch";
 
 //バージョン
-$API_VERSION    = "2007-02-14";
+$API_VERSION    = "2014-02-22";
 
 //--------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
