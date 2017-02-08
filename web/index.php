@@ -39,7 +39,7 @@ $api_url = sprintf("%s?developerId=%s&affiliateId=%s&operation=%s",$API_BASE_URL
 
 //APIへのパラメタの連想配列
 $api_params          = array(
-    "keyword"        => "",
+    "keyword"        => "餃子",
     "version"        => $API_VERSION,
     "shopCode"       => "",
     "genreId"        => "",
