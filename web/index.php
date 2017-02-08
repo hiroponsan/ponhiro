@@ -35,7 +35,7 @@ $API_VERSION    = "2014-02-22";
 //--------- リクエストパラメタの取得とAPIへのリクエストURL生成
 
 // リクエストURL生成
-$api_url = sprintf("%s?applicationId=%s&",$API_BASE_URL,$DEVELOPER_ID,$AFFILIATE_ID);
+$api_url = sprintf("%s?applicationId=%s&");
 
 //APIへのパラメタの連想配列
 $api_params          = array(
