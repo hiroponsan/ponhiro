@@ -24,7 +24,7 @@ $AFFILIATE_ID = "14cb636d.7f06eac6.14cb636e.3ca232c6";
 $API_NAME       = "楽天商品検索API";
 
 // APIのURL
-$API_BASE_URL   = "http://api.rakuten.co.jp/rws/4.0/rest";
+$API_BASE_URL   = "http://api.rakuten.co.jp/rws/3.0/rest";
 
 //オペレーション名
 $OPERATION      = "ItemSearch";
