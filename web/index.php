@@ -39,7 +39,7 @@ $api_url = sprintf("https://app.rakuten.co.jp/services/api/IchibaItem/Search/201
 
 //APIへのパラメタの連想配列
 $api_params          = array(
-    "keyword"        => "",
+    "keyword"        => "餃子",
     "version"        => $API_VERSION,
     "shopCode"       => "",
     "genreId"        => "",
