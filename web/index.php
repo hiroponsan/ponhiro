@@ -11,11 +11,11 @@
 
 // 自分のディベロッパーID
 
-$DEVELOPER_ID = "自分のディベロッパーID";
+$DEVELOPER_ID = "1044399608543350349";
 
 //自分のアフィリエイトID
 
-$AFFILIATE_ID = "自分のアフィリエイトID";
+$AFFILIATE_ID = "14cb636d.7f06eac6.14cb636e.3ca232c6";
 
 /* ---------------- 以上、変更部分 ------------------------------ */
 
@@ -24,7 +24,7 @@ $AFFILIATE_ID = "自分のアフィリエイトID";
 $API_NAME       = "楽天商品検索API";
 
 // APIのURL
-$API_BASE_URL   = "http://api.rakuten.co.jp/rws/1.3/rest";
+$API_BASE_URL   = "hhttps://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?format=json&applicationId=1044399608543350349";
 
 //オペレーション名
 $OPERATION      = "ItemSearch";
