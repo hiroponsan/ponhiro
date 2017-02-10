@@ -1,71 +1,139 @@
 <!DOCTYPE html>
-<html lang='ja'>
+<html lang="ja" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="app">
 <head>
-<title>楽天商品検索API テスト</title>
-<meta charset='utf-8'>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>【サイトのタイトルを入れてね】</title>
+<meta name="description" content="【サイトの説明文を入れてね】">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+    .thumbnail {
+        height: 400px;
+        overflow: hidden;
+    }
+    
+    h3 {
+        font-size: 100%;
+    }
+    
+    .price {
+        color: #F00;
+        font-size: 120%;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
-<?php
-$rakuten_relust = getRakutenResult('進撃の巨人', 1000); // キーワードと最低価格を指定
-foreach ($rakuten_relust as $item) :
-?>
-<div style='margin-bottom: 20px; padding: 30px; border: 1px solid #000; overflow:hidden;'>
- <div style='float: left;'><img src='<?php echo $item['img']; ?>'></div>
- <div style='float: left; padding: 20px;'>
- <div><?php echo $item['name']; ?></div>
- <div><a href='<?php echo $item['url']; ?>' target="_blank"><?php echo $item['url']; ?></a></div>
- <div><?php echo $item['price']; ?>円</div>
- <div><?php echo $item['shop']; ?></div>
- </div>
-</div>
-<?php
-endforeach;
-?>
+ 
+    <div class="container" ng-controller="MainCtrl" ng-cloak>
+    
+        <h1>決定版！男のふんどし特集</h1>
+ 
+        <h2>男性用ふんどし</h2>
+        
+        <div class="row">
+            <div ng-repeat="item in items" class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <a ng-href="{{item.affiliateUrl}}" target="_blank">
+                        <img ng-src="{{item.mediumImageUrls[0]}}">
+                    </a>
+                    <div class="caption">
+                        <h3>
+                            <a ng-href="{{item.affiliateUrl}}" target="_blank">{{item.itemName}}</a>
+                        </h3>
+                        <div class="price">{{item.itemPrice}}円</div>
+                        <rating ng-model="item.reviewAverage" max="5"></rating>
+                        <div class="catchcopy">{{item.catchcopy}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <pagination
+            direction-links="true"
+            boundary-links="false"
+            total-items="totalItems"
+            items-per-page="itemsPerPage"
+            ng-model="currentPage"
+            ng-change="callAPI()"
+            previous-text="«"
+            next-text="»">
+        </pagination>
+ 
+        <div class="center-block">
+            <a href="http://webservice.rakuten.co.jp/" target="_blank">
+                <img src="//webservice.rakuten.co.jp/img/credit/200709/credit_22121.gif">
+            </a>
+        </div>
+ 
+    </div>
+ 
+ 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.10/angular-locale_ja-jp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+ 
+    <script>
+ 
+        // 楽天API用パラメータ
+        var api = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
+        var applicationId = '11083496527718799233';
+        var affiliateId = '14cb636d.7f06eac6.14cb636e.3ca232c6';
+ 
+        // 検索キーワード
+        var keyword = '餃子';
+ 
+        // 一度に読み込む件数
+        var itemsPerPage = 30;
+ 
+        // PCかスマホかで検索条件を分ける
+        var carrier = /android|iphone|ipad|ipod/i.test(navigator.userAgent) ? 2 : 0;
+ 
+        //  Angular を起動する
+        var app = angular.module('app',['ui.bootstrap']);
+ 
+        // コントローラ
+        app.controller('MainCtrl', function($scope, $http) {
+ 
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = itemsPerPage;
+ 
+            $scope.callAPI = function() {
+ 
+                // APIコール用のパラメータ
+                var params = {
+                    applicationId : applicationId,
+                    affiliateId   : affiliateId,
+                    hits          : itemsPerPage,
+                    page          : $scope.currentPage,
+                    carrier       : carrier,
+                    formatVersion : 2,
+                    imageFlag     : 1,
+                    callback      : 'JSON_CALLBACK',
+                    format        : 'json',
+                    sort          : '-reviewAverage',
+                    keyword       : keyword
+                };
+ 
+                // APIをコールする
+                $http.jsonp(api, { params: params })
+                .success(function(result) {
+                    $scope.items = result.Items;
+                    $scope.totalItems = result.count;
+                });
+ 
+            }
+ 
+            // APIを呼び出す
+            $scope.callAPI()
+        });
+ 
+    </script>
+ 
 </body>
 </html>
-  
-<?php 
- 
-function getRakutenResult($keyword, $min_price) {
- 
-// ベースとなるリクエストURL
-$baseurl = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
-// リクエストのパラメータ作成
-$params = array();
-$params['applicationId'] = '1083496527718799233'; // アプリID
-$params['keyword'] = urlencode_rfc3986($keyword); // 任意のキーワード。※文字コードは UTF-8
-$params['sort'] = urlencode_rfc3986('+itemPrice'); // ソートの方法。※文字コードは UTF-8
-$params['minPrice'] = $min_price; // 最低価格
- 
-$canonical_string='';
- 
-foreach($params as $k => $v) {
-    $canonical_string .= '&' . $k . '=' . $v;
-}
-// 先頭の'&'を除去
-$canonical_string = substr($canonical_string, 1);
- 
-// リクエストURL を作成
-$url = $baseurl . '?' . $canonical_string;
- 
-// XMLをオブジェクトに代入
-$rakuten_json=json_decode(@file_get_contents($url, true));
- 
-$items = array();
-foreach($rakuten_json->Items as $item) {
-    $items[] = array(
-                    'name' => (string)$item->Item->itemName,
-                    'url' => (string)$item->Item->itemUrl,
-                    'img' => isset($item->Item->mediumImageUrls[0]->imageUrl) ? (string)$item->Item->mediumImageUrls[0]->imageUrl : '',
-                    'price' => (string)$item->Item->itemPrice,
-                    'shop' => (string)$item->Item->shopName,
-                    );
-}
- 
-return $items;
-}
- 
-// RFC3986 形式で URL エンコードする関数
-function urlencode_rfc3986($str) {
-    return str_replace('%7E', '~', rawurlencode($str));
-}?>
