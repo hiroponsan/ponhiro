@@ -90,7 +90,7 @@ else if ($text == 'ランキング') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ode.jpg",
+            "thumbnailImageUrl" => "item.mediumImageUrls[0]",
             "title" => "1位 オデッセイ",
             "text" => "価格：432円〜",
             "actions" => [
