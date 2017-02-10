@@ -1,3 +1,66 @@
+ <script>
+ 
+        // 楽天API用パラメータ
+        var api = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
+        var applicationId = '1083496527718799233';
+        var affiliateId = '14cb636d.7f06eac6.14cb636e.3ca232c6';
+ 
+        // 検索キーワード
+        var keyword = '餃子';
+
+        // 一度に読み込む件数
+        var itemsPerPage = 30;
+ 
+        // PCかスマホかで検索条件を分ける
+        var carrier = /android|iphone|ipad|ipod/i.test(navigator.userAgent) ? 2 : 0;
+ 
+        //  Angular を起動する
+        var app = angular.module('app',['ui.bootstrap']);
+ 
+        // コントローラ
+        app.controller('MainCtrl', function($scope, $http) {
+ 
+            $scope.currentPage = 1;
+            $scope.itemsPerPage = itemsPerPage;
+ 
+            $scope.callAPI = function() {
+ 
+                // APIコール用のパラメータ
+                var params = {
+                    applicationId : applicationId,
+                    affiliateId   : affiliateId,
+                    hits          : itemsPerPage,
+                    page          : $scope.currentPage,
+                    carrier       : carrier,
+                    formatVersion : 2,
+                    imageFlag     : 1,
+                    callback      : 'JSON_CALLBACK',
+                    format        : 'json',
+                    sort          : '-reviewAverage',
+                    keyword       : keyword
+                };
+ 
+                // APIをコールする
+                $http.jsonp(api, { params: params })
+                .success(function(result) {
+                    $scope.items = result.Items;
+                    $scope.totalItems = result.count;
+                });
+ 
+            }
+ 
+            // APIを呼び出す
+            $scope.callAPI()
+        });
+ 
+    </script>
+
+
+
+
+
+
+
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
@@ -22,9 +85,7 @@ if($type != "text"){
 else if ($text == 'ランキング') {
   $response_format_text = [
   "type" => "template",
-    "altText" => "ランキング
-
-    ",
+    "altText" => "ランキング",
     "template" => [
       "type" => "carousel",
       "columns" => [
