@@ -1,3 +1,18 @@
+ 
+<?php
+$accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
+
+
+//ユーザーからのメッセージ取得
+$json_string = file_get_contents('php://input');
+$jsonObj = json_decode($json_string);
+
+$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
+//メッセージ取得
+$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
+
+?>
+
  <script>
  
         // 楽天API用パラメータ
@@ -51,6 +66,7 @@
  
             // APIを呼び出す
             $scope.callAPI()
+            <?php echo $items ?>
         });
  
     </script>
@@ -62,16 +78,7 @@
 
 
 <?php
-$accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
 
-
-//ユーザーからのメッセージ取得
-$json_string = file_get_contents('php://input');
-$jsonObj = json_decode($json_string);
-
-$type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
-//メッセージ取得
-$text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
@@ -90,7 +97,7 @@ else if ($text == 'ランキング') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "item.mediumImageUrls[0]",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ode.jpg",
             "title" => "1位 オデッセイ",
             "text" => "価格：432円〜",
             "actions" => [
