@@ -13,6 +13,14 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+</head>
+<body>
+ 
+</body>
  <script>
  
         // 楽天API用パラメータ
@@ -21,7 +29,8 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
         var affiliateId = '14cb636d.7f06eac6.14cb636e.3ca232c6';
  
         // 検索キーワード
-        var keyword = '餃子';
+        var keyword = '<?php $text ?>';
+         document.write(keyword);
 
         // 一度に読み込む件数
         var itemsPerPage = 30;
@@ -71,7 +80,7 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
  
     </script>
 
-
+</html>
 
 
 
