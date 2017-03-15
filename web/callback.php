@@ -75,15 +75,12 @@ $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
  
             // APIを呼び出す
             $scope.callAPI()
-            <?php echo $items ?>
+
         });
  
     </script>
 
 </html>
-
-
-
 
 
 <?php
@@ -98,7 +95,7 @@ if($type != "text"){
 
 
 
-else if ($text == 'ランキング') {
+else if ($text == 'あ') {
   $response_format_text = [
   "type" => "template",
     "altText" => "ランキング",
