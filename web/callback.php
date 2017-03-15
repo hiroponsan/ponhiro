@@ -95,7 +95,7 @@ if($type != "text"){
 
 
 
-else if ($text == 'あ') {
+else if ($text == '1人でじっくり') {
   $response_format_text = [
   "type" => "template",
     "altText" => "ランキング",
