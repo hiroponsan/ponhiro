@@ -1,0 +1,56 @@
+[
+    {
+        "name": "rakuten-ws/rws-php-sdk",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rakuten-ws/rws-php-sdk.git",
+            "reference": "54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/rakuten-ws/rws-php-sdk/zipball/54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9",
+            "reference": "54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "php": ">=5.2.3"
+        },
+        "suggest": {
+            "ext-curl": "*",
+            "pear-pear/HTTP_Client": "*"
+        },
+        "time": "2015-06-08T05:45:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "RakutenRws_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Shogo Kawahara",
+                "email": "shogo.a.kawahara@mail.rakuten.com"
+            }
+        ],
+        "description": "The SDK of Rakuten Web Service",
+        "homepage": "http://webservice.rakuten.co.jp",
+        "keywords": [
+            "client",
+            "sdk",
+            "webapi"
+        ]
+    }
+]

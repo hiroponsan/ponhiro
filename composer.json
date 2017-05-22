@@ -1,5 +1,5 @@
 {
     "require": {
-        "ext-mbstring": "*"
+        "rakuten-ws/rws-php-sdk": "1.*"
     }
 }

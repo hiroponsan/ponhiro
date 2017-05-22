@@ -4,17 +4,67 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "db9bd4b90f21bb87e53f557731021d61",
-    "content-hash": "adc392ef7340a30855efcdacc40133fd",
-    "packages": [],
+    "content-hash": "651861165815487a538a231e6083f4a3",
+    "packages": [
+        {
+            "name": "rakuten-ws/rws-php-sdk",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rakuten-ws/rws-php-sdk.git",
+                "reference": "54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rakuten-ws/rws-php-sdk/zipball/54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9",
+                "reference": "54b0dc8cdc5a92335bc75d72c480e6b7bb127ca9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">=5.2.3"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "pear-pear/HTTP_Client": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "RakutenRws_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shogo Kawahara",
+                    "email": "shogo.a.kawahara@mail.rakuten.com"
+                }
+            ],
+            "description": "The SDK of Rakuten Web Service",
+            "homepage": "http://webservice.rakuten.co.jp",
+            "keywords": [
+                "client",
+                "sdk",
+                "webapi"
+            ],
+            "time": "2015-06-08T05:45:03+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "ext-mbstring": "*"
-    },
+    "platform": [],
     "platform-dev": []
 }

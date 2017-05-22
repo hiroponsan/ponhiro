@@ -14,7 +14,7 @@ if($type != "text"){
 }
 //返信データ作成
 
-} if ($text == 'いいえ') {
+if ($text == 'いいえ') {
   exit;
 } else if ($text == 'はい') {
   $response_format_text = [
