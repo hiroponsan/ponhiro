@@ -22,52 +22,37 @@ if ($text == 'はい') {
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
-            "title" => "A.",
-            "text" => "選択",
+            "title" => "本物のヒロポンはどれ",
+            "text" => "A.",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "A."
               ]
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "▲▲レストラン",
-            "text" => "それともこちら？（２つ目）",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
+            "title" => "本物のヒロポンはどれ",
+            "text" => "B.",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=222"
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "B."
               ]
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpg",
             "title" => "■■レストラン",
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=333"
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "C."
               ]
             ]
           ]
