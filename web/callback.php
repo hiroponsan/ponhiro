@@ -31,10 +31,14 @@ if ($text == 'はい') {
                   "data" => "action=rsv&itemid=111"
               ],
               [
-                  
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=111"
               ],
               [
-                  
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -91,7 +95,7 @@ if ($text == 'はい') {
     "altText" => "クイズは全部で５門です。それでは準備はいいですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "そんな誕生日のさやかちゃんにクイズです♪ 準備はいいですか？（はい／いいえ）",
+        "text" => "そんな誕生日のさやかちゃんにプレゼントをかけたクイズです♪ 準備はいいですか？",
         "actions" => [
             [
               "type" => "message",
