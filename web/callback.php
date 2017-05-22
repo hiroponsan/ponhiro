@@ -21,7 +21,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image.jpeg",
             "title" => "●●レストラン",
             "text" => "こちらにしますか？",
             "actions" => [
@@ -95,7 +95,7 @@ if ($text == 'はい') {
     "altText" => "クイズは全部で５門です。それでは準備はいいですか？（はい／いいえ）",
     "template" => [
         "type" => "confirm",
-        "text" => "クイズは全部で５門です。それでは準備はいいですか？（はい／いいえ）",
+        "text" => "そんな誕生日のさやかちゃんにクイズです♪ 準備はいいですか？（はい／いいえ）",
         "actions" => [
             [
               "type" => "message",
