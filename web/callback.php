@@ -34,8 +34,12 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "電話する",
                   "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
-          
             ]
           ],
           [
