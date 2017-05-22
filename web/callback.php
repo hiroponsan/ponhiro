@@ -24,11 +24,16 @@ if ($text == 'はい') {
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
             "title" => "A.",
             "text" => "選択",
-            "action" => [
+            "actions" => [
               [
                   "type" => "postback",
                   "label" => "予約する",
                   "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=111"
               ]
             ]
           ],
@@ -46,11 +51,6 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "電話する",
                   "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -68,11 +68,6 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "電話する",
                   "data" => "action=pcall&itemid=333"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ]
