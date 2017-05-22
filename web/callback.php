@@ -22,23 +22,13 @@ if ($text == 'はい') {
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image.jpeg",
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
+            "title" => "A.",
+            "text" => "選択",
             "actions" => [
               [
                   "type" => "postback",
                   "label" => "予約する",
                   "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
