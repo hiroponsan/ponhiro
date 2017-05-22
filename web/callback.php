@@ -1,548 +1,80 @@
- 
 <?php
 $accessToken = getenv('LINE_CHANNEL_ACCESS_TOKEN');
-
-
 //ユーザーからのメッセージ取得
 $json_string = file_get_contents('php://input');
 $jsonObj = json_decode($json_string);
-
 $type = $jsonObj->{"events"}[0]->{"message"}->{"type"};
 //メッセージ取得
 $text = $jsonObj->{"events"}[0]->{"message"}->{"text"};
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title> </title>
-</head>
-<body>
- 
-</body>
- <script>
- 
-        // 楽天API用パラメータ
-        var api = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
-        var applicationId = '1083496527718799233';
-        var affiliateId = '14cb636d.7f06eac6.14cb636e.3ca232c6';
- 
-        // 検索キーワード
-        var keyword = '<?php $text ?>';
-         document.write(keyword);
-
-        // 一度に読み込む件数
-        var itemsPerPage = 30;
- 
-        // PCかスマホかで検索条件を分ける
-        var carrier = /android|iphone|ipad|ipod/i.test(navigator.userAgent) ? 2 : 0;
- 
-        //  Angular を起動する
-        var app = angular.module('app',['ui.bootstrap']);
- 
-        // コントローラ
-        app.controller('MainCtrl', function($scope, $http) {
- 
-            $scope.currentPage = 1;
-            $scope.itemsPerPage = itemsPerPage;
- 
-            $scope.callAPI = function() {
- 
-                // APIコール用のパラメータ
-                var params = {
-                    applicationId : applicationId,
-                    affiliateId   : affiliateId,
-                    hits          : itemsPerPage,
-                    page          : $scope.currentPage,
-                    carrier       : carrier,
-                    formatVersion : 2,
-                    imageFlag     : 1,
-                    callback      : 'JSON_CALLBACK',
-                    format        : 'json',
-                    sort          : '-reviewAverage',
-                    keyword       : keyword
-                };
- 
-                // APIをコールする
-                $http.jsonp(api, { params: params })
-                .success(function(result) {
-                    $scope.items = result.Items;
-                    $scope.totalItems = result.count;
-                });
- 
-            }
- 
-            // APIを呼び出す
-            $scope.callAPI()
-
-        });
- 
-    </script>
-
-</html>
-
-
-<?php
-
 //ReplyToken取得
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-
 //メッセージ以外のときは何も返さず終了
 if($type != "text"){
-	exit;
+  exit;
 }
+//返信データ作成
 
-
-
-else if ($text == '1人でじっくり') {
-  $response_format_text = [
-  "type" => "template",
-    "altText" => "ランキング",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/ode.jpg",
-            "title" => "1位 オデッセイ",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/180421/"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "http://video.rakuten.co.jp/content/180421/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/304311/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/star.jpg",
-            "title" => "2位 スターウォーズ",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177417/"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "http://video.rakuten.co.jp/content/177417/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/299730/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/intern.jpg",
-            "title" => "3位 マイ・インターン",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/166188/2"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/166188/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/293958/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-4.jpg",
-            "title" => "4位 007スペクター",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177408/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/177408/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/299721/"
-              ]
-            ]
-          ],
-
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
-            "title" => "5位 デットプール",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                 "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/192912/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/192912/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
-              ]
-            ]
-          ]
-      ]
-    ]
-     
-  ];
-} 
-
-else if ($text == 'え') {
-  $response_format_text = [
-  "type" => "template",
-    "altText" => "家族で
-
-    ",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/家族1.png",
-            "title" => "アングリーバード",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/135232/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/135232/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/227485/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/家族2.png",
-            "title" => "ドラえもん",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/135232/"
-              ],
-              [
-                   "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/135232/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/227485/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/intern.jpg",
-            "title" => "3位 マイ・インターン",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/166188/2"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/166188/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/293958/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-4.jpg",
-            "title" => "4位 007スペクター",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/299721/"
-              ]
-            ]
-          ],
-
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-5.jpg",
-            "title" => "5位 デットプール",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "postback",
-                  "label" => "告知を見る",
-                  "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "Webで詳細を見る",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "ランキングをもっと見る",
-                  "uri" => "http://video.rakuten.co.jp/static/cpn/spl000036/?l-id=home_unit04_01/"
-              ]
-            ]
-          ]
-      ]
-    ]
-     
-  ];
-} 
-
-
-else if ($text == 'オススメ') {
-  $response_format_text = [
-  "type" => "template",
-    "altText" => "ランキングオススメだよー
-
-    ",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_1.png",
-            "title" => "ハドソン川の奇跡",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/203761/?l-id=home_slider01"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/203761/?l-id=home_slider01"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/408935/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_2.png",
-            "title" => "インフェルノ",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/206271/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "特集ページを見る",
-                  "uri" => "http://video.rakuten.co.jp/special/inferno/?l-id=home_slider02"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/403485/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_3.png",
-            "title" => "スター・トリック",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/special/startrekbeyond/?l-id=home_slider03"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "特集ページを見る",
-                  "uri" => "http://video.rakuten.co.jp/special/startrekbeyond/?l-id=home_slider03"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/403484/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_4.png",
-            "title" => "森山教習所",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "Webで詳細を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/205876/?l-id=home_slider04"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/402445/"
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/reco_5.png",
-            "title" => "本当に良き時代",
-            "text" => "価格：432円〜",
-            "actions" => [
-              [
-                  "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/207263/"
-              ],
-              [
-                 "type" => "uri",
-                  "label" => "告知を見る",
-                  "uri" => "http://video.rakuten.co.jp/content/207263/"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "購入する",
-                  "uri" => "http://video.rakuten.co.jp/basket/add/405616/"
-              ]
-            ]
-          ]
-      ]
-    ]
-     
-  ];
-} 
-
-
-
-
-else if ($text == 'ひろぽんクイズ') {
+} if ($text == 'いいえ') {
+  exit;
+} else if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "3問あるよ",
+    "altText" => "次のうち本物のヒロポンはどれでしょう？",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-1.jpg",
-            "title" => "第１門",
-            "text" => "ヒロポンの口癖は？",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "image1.jpeg",
+            
+            "text" => "A.",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "肉食いてー",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "ハラヘッタ",
-                  "data" => "action=pcall&itemid=111"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "ここはどこ？",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "type" => "message",
+                  "label" => "選択する",
+                  "text" => "A."
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
-            "title" => "第2門",
-            "text" => "ヒロポンの携帯は？",
+            "title" => "▲▲レストラン",
+            "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "iPhone７",
+                  "label" => "予約する",
                   "data" => "action=rsv&itemid=222"
               ],
               [
                   "type" => "postback",
-                  "label" => "Android",
+                  "label" => "電話する",
                   "data" => "action=pcall&itemid=222"
               ],
               [
                   "type" => "uri",
-                  "label" => "ガラケー",
+                  "label" => "詳しく見る（ブラウザ起動）",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
-            "title" => "第3問",
-            "text" => "今ひろぽんはどこにいる？",
+            "title" => "■■レストラン",
+            "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
                   "type" => "postback",
-                  "label" => "大分県",
+                  "label" => "予約する",
                   "data" => "action=rsv&itemid=333"
               ],
               [
                   "type" => "postback",
-                  "label" => "楽天",
+                  "label" => "電話する",
                   "data" => "action=pcall&itemid=333"
               ],
               [
                   "type" => "uri",
-                  "label" => "Amazon",
+                  "label" => "詳しく見る（ブラウザ起動）",
                   "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
@@ -550,13 +82,32 @@ else if ($text == 'ひろぽんクイズ') {
       ]
     ]
   ];
-} 
-
+} else {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "クイズは全部で５門です。それでは準備はいいですか？（はい／いいえ）",
+    "template" => [
+        "type" => "confirm",
+        "text" => "こんにちわ 何かご用ですか？",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "はい"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "いいえ"
+            ]
+        ]
+    ]
+  ];
+}
 $post_data = [
-	"replyToken" => $replyToken,
-	"messages" => [$response_format_text]
-	];
-
+  "replyToken" => $replyToken,
+  "messages" => [$response_format_text]
+  ];
 $ch = curl_init("https://api.line.me/v2/bot/message/reply");
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
