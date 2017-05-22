@@ -29,6 +29,12 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "予約する",
                   "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  
+              ],
+              [
+                  
               ]
             ]
           ],
