@@ -13,10 +13,7 @@ if($type != "text"){
   exit;
 }
 //返信データ作成
-
-if ($text == 'いいえ') {
-  exit;
-} else if ($text == 'はい') {
+if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
     "altText" => "次のうち本物のヒロポンはどれでしょう？",
