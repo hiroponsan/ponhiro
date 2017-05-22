@@ -35,11 +35,7 @@ if ($text == 'はい') {
                   "label" => "電話する",
                   "data" => "action=pcall&itemid=111"
               ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-              ]
+              
             ]
           ],
           [
@@ -92,7 +88,7 @@ if ($text == 'はい') {
 } else {
   $response_format_text = [
     "type" => "template",
-    "altText" => "クイズは全部で５門です。それでは準備はいいですか？（はい／いいえ）",
+    "altText" => "クイズは全部で５門です。それでは準備はいいですか？",
     "template" => [
         "type" => "confirm",
         "text" => "そんな誕生日のさやかちゃんにプレゼントをかけたクイズです♪ 準備はいいですか？",
