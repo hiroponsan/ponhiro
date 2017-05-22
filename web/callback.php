@@ -34,8 +34,8 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "電話する",
                   "data" => "action=pcall&itemid=111"
-              ],
-              
+              ]
+          
             ]
           ],
           [
