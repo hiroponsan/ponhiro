@@ -62,20 +62,25 @@ if ($text == 'はい') {
 } else if ($text == 'C.') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "クイズは全部で５門です。それでは準備はいいですか？",
+    "altText" => "正解！ 第2門. さやかちゃんは今日で何歳になる？",
     "template" => [
         "type" => "confirm",
-        "text" => "そんな誕生日のさやかちゃんにプレゼントをかけたクイズです♪ 準備はいいですか？",
+        "text" => "正解！ 第2門. さやかちゃんは今日で何歳になる？",
         "actions" => [
             [
               "type" => "message",
-              "label" => "はい",
-              "text" => "はい"
+              "label" => "23ちゃい",
+              "text" => "23ちゃい"
             ],
             [
               "type" => "message",
-              "label" => "いいえ",
-              "text" => "いいえ"
+              "label" => "24ちゃい",
+              "text" => "24ちゃい"
+            ],
+            [
+              "type" => "message",
+              "label" => "2ちゃい",
+              "text" => "2ちゃい"
             ]
         ]
     ]
