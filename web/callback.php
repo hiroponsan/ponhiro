@@ -231,18 +231,6 @@ if ($text == 'はい') {
       ]
     ]
   ];
-} else if ($text == '受け取る') {
-  $response_format_text = [
-    "type" => "video",
-    "altText" => "こちらの〇〇はいかがですか？",
-    "previewImageUrl" => "https://www.youtube.com/watch?v=hajnEpCq5SE"
-    "template" => [
-      "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/jobs.png",
-      "title" => "全問正解♪",
-      "text" => "おめでとう♪誕生日プレゼントを受け取りますか？",
-    ]
-  ];
 } else {
   $response_format_text = [
     "type" => "template",
