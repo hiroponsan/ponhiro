@@ -59,12 +59,12 @@ if ($text == 'はい') {
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image4.jpeg",
             "title" => "ヒロポンはどれ??",
-            "text" => "D.",
+            "text" => "D. 全てひろぽん♪",
             "actions" => [
               [
                   "type" => "message",
                   "label" => "選択",
-                  "text" => "全てひろぽん♪"
+                  "text" => "D."
               ]
             ]
           ]
