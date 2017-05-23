@@ -181,7 +181,7 @@ if ($text == 'はい') {
             "actions" => [
               [
                  "type" => "message",
-                  "label" => "選択",
+                  "label" => "音楽",
                   "text" => "音楽"
               ]
             ]
@@ -193,7 +193,7 @@ if ($text == 'はい') {
             "actions" => [
               [
                    "type" => "message",
-                  "label" => "選択",
+                  "label" => "デザイン",
                   "text" => "デザイン"
               ]
             ]
@@ -205,7 +205,7 @@ if ($text == 'はい') {
             "actions" => [
               [
                    "type" => "message",
-                  "label" => "選択",
+                  "label" => "音楽とデザイン両方♪",
                   "text" => "音楽とデザイン両方♪"
               ]
             ]
