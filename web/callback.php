@@ -180,21 +180,21 @@ if ($text == 'はい') {
             "text" => "さやかちゃんが今一番勉強したいのは？",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
+                 "type" => "message",
+                  "label" => "選択",
+                  "text" => "音楽"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/design.jpeg",
-            "title" => "▲▲レストラン",
-            "text" => "それともこちら？（２つ目）",
+            "title" => "最終問題♪",
+            "text" => "さやかちゃんが今一番勉強したいのは？",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
+                   "type" => "message",
+                  "label" => "選択",
+                  "text" => "デザイン"
               ]
             ]
           ],
@@ -204,9 +204,9 @@ if ($text == 'はい') {
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
+                   "type" => "message",
+                  "label" => "選択",
+                  "text" => "音楽とデザイン両方♪"
               ]
             ]
           ]
