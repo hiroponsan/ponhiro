@@ -175,14 +175,24 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/music.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/desin.jpeg",
             "title" => "正解！",
             "text" => "最終問題 さやかちゃんが今一番やりたい事は？",
             "actions" => [
               [
-                  "type" => "message",
-                  "label" => "はい",
-                  "text" => "はい"
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -195,6 +205,16 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "予約する",
                   "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -204,9 +224,19 @@ if ($text == 'はい') {
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "message",
-                  "label" => "はい",
-                  "text" => "はい"
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=333"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ]
