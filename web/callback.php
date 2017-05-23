@@ -170,19 +170,19 @@ if ($text == 'はい') {
 } else if ($text == '最高！' or $text == 'まあまあかな' or $text == 'ちょっと微妙や。。' or $text == '出直してこい♪') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "さやかちゃんが今一番勉強したいのは？",
+    "altText" => "メルカリで売られたのは次のうちどれ？",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/music.jpeg",
-            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
-            "text" => "デザイン",
+            "title" => "最終問題♪",
+            "text" => "さやかちゃんが今一番勉強したいのは？",
             "actions" => [
               [
-                 "type" => "message",
-            　　  "label" => "",
-            　　  "text" => "はい"
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=111"
               ]
             ]
           ],
