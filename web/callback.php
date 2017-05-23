@@ -243,7 +243,7 @@ if ($text == 'はい') {
       "actions" => [
           [
             "type" => "postback",
-            "label" => "今からひろぽんが準備する〜♪",
+            "label" => "今ひろぽんが準備する〜♪",
             "data" => "action=pcall&itemid=123"
           ]
       ]
