@@ -177,36 +177,36 @@ if ($text == 'はい') {
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/music.jpeg",
             "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
-            "text" => "音楽",
+            "text" => "デザイン",
             "actions" => [
               [
                  "type" => "message",
-            　　  "label" => "選択",
-            　　  "text" => "選択"
+            　　  "label" => "",
+            　　  "text" => "はい"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/design.jpeg",
-            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
-            "text" => "デザイン",
+            "title" => "▲▲レストラン",
+            "text" => "それともこちら？（２つ目）",
             "actions" => [
               [
-                  "type" => "message",
-            　　  "label" => "選択",
-            　　  "text" => "選択"
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=222"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/both.jpeg",
-            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
-            "text" => "音楽とデザイン両方♪",
+            "title" => "■■レストラン",
+            "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                   "type" => "message",
-            　　  "label" => "選択",
-            　　  "text" => "選択"
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=333"
               ]
             ]
           ]
