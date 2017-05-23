@@ -69,13 +69,18 @@ if ($text == 'はい') {
         "actions" => [
             [
               "type" => "message",
-              "label" => "はい",
-              "text" => "はい"
+              "label" => "23ちゃい",
+              "text" => "23ちゃい"
             ],
             [
               "type" => "message",
-              "label" => "いいえ",
-              "text" => "いいえ"
+              "label" => "24ちゃい",
+              "text" => "24ちゃい"
+            ],
+            [
+              "type" => "message",
+              "label" => "2ちゃい",
+              "text" => "2ちゃい"
             ]
         ]
     ]
