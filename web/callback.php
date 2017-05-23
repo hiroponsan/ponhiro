@@ -200,8 +200,8 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/both.jpeg",
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
+            "title" => "最終問題♪",
+            "text" => "さやかちゃんが今一番勉強したいのは？",
             "actions" => [
               [
                    "type" => "message",
@@ -209,6 +209,24 @@ if ($text == 'はい') {
                   "text" => "音楽とデザイン両方♪"
               ]
             ]
+          ]
+      ]
+    ]
+  ];
+} else if ($text == '音楽とデザイン両方♪') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/jobs.png",
+      "title" => "全問正解です♪",
+      "text" => "おめでとうございます。プレゼントを受け取りますか？",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "受け取る",
+            "text" => "受け取る"
           ]
       ]
     ]
