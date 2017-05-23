@@ -123,6 +123,53 @@ if ($text == 'はい') {
       ]
     ]
   ];
+} else if ($text == '24 years old') {
+   $response_format_text = [
+    $response_format_text = [
+    "type" => "template",
+    "altText" => "候補を３つご案内しています。",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "A.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "A."
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "B.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "B."
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "C.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "C."
+              ]
+            ]
+          ]
+      ]
+    ]
+  ];
 } else {
   $response_format_text = [
     "type" => "template",
