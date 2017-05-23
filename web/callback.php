@@ -82,6 +82,11 @@ if ($text == 'はい') {
            "type" => "message",
             "label" => "24 years old",
             "text" => "24 years old"
+          ],
+          [
+           "type" => "message",
+            "label" => "おばちゃん",
+            "text" => "おばちゃん"
           ]
       ]
     ]
