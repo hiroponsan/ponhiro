@@ -22,7 +22,7 @@ if ($text == 'はい') {
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
-            "title" => "ヒロポンはどれ??",
+            "title" => "第1門. ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
               [
@@ -34,7 +34,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
-            "title" => "ヒロポンはどれ??",
+            "title" => "第1門. ヒロポンはどれ??",
             "text" => "B.",
             "actions" => [
               [
@@ -46,7 +46,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
-            "title" => "ヒロポンはどれ??",
+            "title" => "第1門. ヒロポンはどれ??",
             "text" => "C.",
             "actions" => [
               [
@@ -58,8 +58,8 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image4.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "D. 全部",
+            "title" => "第1門. ヒロポンはどれ??",
+            "text" => "D. A.B.C全部",
             "actions" => [
               [
                   "type" => "message",
