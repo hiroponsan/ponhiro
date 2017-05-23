@@ -76,11 +76,6 @@ if ($text == 'はい') {
               "type" => "message",
               "label" => "24ちゃい",
               "text" => "24ちゃい"
-            ],
-            [
-              "type" => "message",
-              "label" => "2ちゃい",
-              "text" => "2ちゃい"
             ]
         ]
     ]
