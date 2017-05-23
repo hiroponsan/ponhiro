@@ -16,7 +16,7 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "",
+    "altText" => "候補を３つご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
@@ -170,14 +170,14 @@ if ($text == 'はい') {
 } else if ($text == '最高！' or $text == 'まあまあかな' or $text == 'ちょっと微妙や。。' or $text == '出直してこい♪') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "",
+    "altText" => "メルカリで売られたのは次のうちどれ？",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/desin.jpeg",
-            "title" => "正解！",
-            "text" => "最終問題 さやかちゃんが今一番やりたい事は？",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image7.jpeg",
+            "title" => "●●レストラン",
+            "text" => "こちらにしますか？",
             "actions" => [
               [
                   "type" => "postback",
