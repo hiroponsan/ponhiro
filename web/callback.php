@@ -62,25 +62,20 @@ if ($text == 'はい') {
 } else if ($text == 'C.') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "正解！ 第2門. さやかちゃんは今日で何歳になる？",
+    "altText" => "正解！ 第2門. さやかちゃんは今日何歳になった？",
     "template" => [
         "type" => "confirm",
-        "text" => "正解！ 第2門. さやかちゃんは今日で何歳になる？",
+        "text" => "正解！ 第2門. さやかちゃんは今日何歳になった？",
         "actions" => [
             [
               "type" => "message",
-              "label" => "23ちゃい",
-              "text" => "23ちゃい"
+              "label" => "はい",
+              "text" => "はい"
             ],
             [
               "type" => "message",
-              "label" => "24ちゃい",
-              "text" => "24ちゃい"
-            ],
-            [
-              "type" => "message",
-              "label" => "2ちゃい",
-              "text" => "2ちゃい"
+              "label" => "いいえ",
+              "text" => "いいえ"
             ]
         ]
     ]
@@ -107,6 +102,8 @@ if ($text == 'はい') {
     ]
   ];
 }
+
+
 $post_data = [
   "replyToken" => $replyToken,
   "messages" => [$response_format_text]
