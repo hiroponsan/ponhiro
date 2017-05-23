@@ -71,7 +71,7 @@ if ($text == 'はい') {
       ]
     ]
   ];
-} else if ($text == 'C.') {
+} else if ($text == 'D.') {
    $response_format_text = [
     "type" => "template",
     "altText" => "正解！ 第2門. さやかちゃんは今日何歳になった？",
