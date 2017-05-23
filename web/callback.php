@@ -16,13 +16,13 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補を３つご案内しています。",
+    "altText" => "ヒロポンはどれ??",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
-            "title" => "本物のヒロポンはどれ??",
+            "title" => "ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
               [
@@ -34,7 +34,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
-            "title" => "本物のヒロポンはどれ??",
+            "title" => "ヒロポンはどれ??",
             "text" => "B.",
             "actions" => [
               [
@@ -46,7 +46,7 @@ if ($text == 'はい') {
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
-            "title" => "本物のヒロポンはどれ??",
+            "title" => "ヒロポンはどれ??",
             "text" => "C.",
             "actions" => [
               [
@@ -59,7 +59,38 @@ if ($text == 'はい') {
       ]
     ]
   ];
-} else {
+} 
+
+else if ($text == 'C.') {
+ $response_format_text = [
+    "type" => "template",
+    "altText" => "今日のデートはどうだった？",
+    "template" => [
+        "type" => "confirm",
+        "text" => "正解！
+        　それでは第２門　今日のデートはどうだった？",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "最高！",
+              "text" => "最高！"
+            ],
+            [
+              "type" => "message",
+              "label" => "まあまあ",
+              "text" => "まあまあ"
+            ],
+            [
+              "type" => "message",
+              "label" => "全然ダメ",
+              "text" => "全然ダメ"
+            ]
+        ]
+    ]
+  ];
+}
+
+else {
   $response_format_text = [
     "type" => "template",
     "altText" => "クイズは全部で５門です。それでは準備はいいですか？",
