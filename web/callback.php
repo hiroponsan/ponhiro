@@ -60,24 +60,30 @@ if ($text == 'はい') {
     ]
   ];
 } else if ($text == 'C.') {
-  $response_format_text = [
+   $response_format_text = [
     "type" => "template",
     "altText" => "正解！ 第2門. さやかちゃんは今日何歳になった？",
     "template" => [
-        "type" => "confirm",
-        "text" => "正解！ 第2門. さやかちゃんは今日何歳になった？",
-        "actions" => [
-            [
-              "type" => "message",
-              "label" => "23ちゃい",
-              "text" => "23ちゃい"
-            ],
-            [
-              "type" => "message",
-              "label" => "24ちゃい",
-              "text" => "24ちゃい"
-            ]
-        ]
+      "type" => "buttons",
+      "title" => "正解！",
+      "text" => "第2門. さやかちゃんは今日何歳になった？",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "2ちゃい",
+            "text" => "2ちゃい"
+          ],
+          [
+           "type" => "message",
+            "label" => "23ちゃい",
+            "text" => "23ちゃい"
+          ],
+          [
+           "type" => "message",
+            "label" => "24 years old",
+            "text" => "24 years old"
+          ]
+      ]
     ]
   ];
 } else {
