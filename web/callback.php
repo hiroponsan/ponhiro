@@ -21,7 +21,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image5.jpeg",
             "title" => "ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
