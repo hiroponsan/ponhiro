@@ -16,61 +16,13 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "ヒロポンはどれ??",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "A.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "A."
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "B.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "B."
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "C.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "C."
-              ]
-            ]
-          ]
-      ]
-    ]
-  ];
-} 
-
-else if ($text == 'C.') {
-  $response_format_text = [
-    "type" => "template",
     "altText" => "候補を３つご案内しています。",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
-            "title" => "",
+            "title" => "ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
               [
@@ -107,9 +59,28 @@ else if ($text == 'C.') {
       ]
     ]
   ];
-}
-
-else {
+} else if ($text == 'C.') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "クイズは全部で５門です。それでは準備はいいですか？",
+    "template" => [
+        "type" => "confirm",
+        "text" => "そんな誕生日のさやかちゃんにプレゼントをかけたクイズです♪ 準備はいいですか？",
+        "actions" => [
+            [
+              "type" => "message",
+              "label" => "はい",
+              "text" => "はい"
+            ],
+            [
+              "type" => "message",
+              "label" => "いいえ",
+              "text" => "いいえ"
+            ]
+        ]
+    ]
+  ];
+} else {
   $response_format_text = [
     "type" => "template",
     "altText" => "クイズは全部で５門です。それでは準備はいいですか？",
