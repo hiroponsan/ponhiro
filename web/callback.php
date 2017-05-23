@@ -175,7 +175,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image4.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
             "title" => "ヒロポンはどれ??",
             "text" => "B.",
             "actions" => [
@@ -187,7 +187,7 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
             "title" => "ヒロポンはどれ??",
             "text" => "C.",
             "actions" => [
