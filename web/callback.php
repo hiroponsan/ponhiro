@@ -16,7 +16,7 @@ if($type != "text"){
 if ($text == 'はい') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "候補を３つご案内しています。",
+    "altText" => "",
     "template" => [
       "type" => "carousel",
       "columns" => [
@@ -170,29 +170,19 @@ if ($text == 'はい') {
 } else if ($text == '最高！' or $text == 'まあまあかな' or $text == 'ちょっと微妙や。。' or $text == '出直してこい♪') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "メルカリで売られたのは",
+    "altText" => "",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image7.jpeg",
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/music.jpeg",
+            "title" => "正解！",
+            "text" => "最終問題 さやかちゃんが今一番やりたい事は？",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=111"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "type" => "message",
+                  "label" => "はい",
+                  "text" => "はい"
               ]
             ]
           ],
@@ -205,16 +195,6 @@ if ($text == 'はい') {
                   "type" => "postback",
                   "label" => "予約する",
                   "data" => "action=rsv&itemid=222"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=222"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
               ]
             ]
           ],
@@ -224,19 +204,9 @@ if ($text == 'はい') {
             "text" => "はたまたこちら？（３つ目）",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
-              ],
-              [
-                  "type" => "postback",
-                  "label" => "電話する",
-                  "data" => "action=pcall&itemid=333"
-              ],
-              [
-                  "type" => "uri",
-                  "label" => "詳しく見る（ブラウザ起動）",
-                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+                  "type" => "message",
+                  "label" => "はい",
+                  "text" => "はい"
               ]
             ]
           ]
