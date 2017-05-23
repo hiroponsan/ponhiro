@@ -91,6 +91,83 @@ if ($text == 'はい') {
       ]
     ]
   ];
+} else if ($text == '24 years old') {
+   $response_format_text = [
+    "type" => "template",
+    "altText" => "正解♪ 第3門. 今日のデートはどうだった？",
+    "template" => [
+      "type" => "buttons",
+      "title" => "正解♪",
+      "text" => "第3門. 今日のデートはどうだった？",
+      "actions" => [
+          [
+            "type" => "message",
+            "label" => "最高！",
+            "text" => "最高！"
+          ],
+          [
+           "type" => "message",
+            "label" => "まあまあかな",
+            "text" => "まあまあかな"
+          ],
+          [
+           "type" => "message",
+            "label" => "ちょっと微妙や。。",
+            "text" => "ちょっと微妙や。。"
+          ],
+          [
+           "type" => "message",
+            "label" => "出直してこい♪",
+            "text" => "出直してこい♪"
+          ]
+      ]
+    ]
+  ];
+} else if ($text == '最高！') {
+  "type" => "template",
+    "altText" => "正解！ 最終問題. メルカリで出品されていたのは？",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "A.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "A."
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "B.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "B."
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image5.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "C.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "C."
+              ]
+            ]
+          ]
+      ]
+    ]
+  ];
 } else {
   $response_format_text = [
     "type" => "template",
