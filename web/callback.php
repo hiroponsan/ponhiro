@@ -170,43 +170,43 @@ if ($text == 'はい') {
 } else if ($text == '最高！' or $text == 'まあまあかな' or $text == 'ちょっと微妙や。。' or $text == '出直してこい♪') {
   $response_format_text = [
     "type" => "template",
-    "altText" => "メルカリで売られたのは次のうちどれ？",
+    "altText" => "さやかちゃんが今一番勉強したいのは？",
     "template" => [
       "type" => "carousel",
       "columns" => [
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/music.jpeg",
-            "title" => "●●レストラン",
-            "text" => "こちらにしますか？",
+            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
+            "text" => "音楽",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=111"
+                 "type" => "message",
+            　　  "label" => "選択",
+            　　  "text" => "選択"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/design.jpeg",
-            "title" => "▲▲レストラン",
-            "text" => "それともこちら？（２つ目）",
+            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
+            "text" => "デザイン",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=222"
+                  "type" => "message",
+            　　  "label" => "選択",
+            　　  "text" => "選択"
               ]
             ]
           ],
           [
             "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/both.jpeg",
-            "title" => "■■レストラン",
-            "text" => "はたまたこちら？（３つ目）",
+            "title" => "最終問題♪ さやかちゃんが今一番勉強したいのは？",
+            "text" => "音楽とデザイン両方♪",
             "actions" => [
               [
-                  "type" => "postback",
-                  "label" => "予約する",
-                  "data" => "action=rsv&itemid=333"
+                   "type" => "message",
+            　　  "label" => "選択",
+            　　  "text" => "選択"
               ]
             ]
           ]
