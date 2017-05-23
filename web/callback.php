@@ -219,29 +219,14 @@ if ($text == 'はい') {
     "altText" => "こちらの〇〇はいかがですか？",
     "template" => [
       "type" => "buttons",
-      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img1.jpg",
-      "title" => "○○レストラン",
-      "text" => "お探しのレストランはこれですね",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/jobs.png",
+      "title" => "全問正解♪",
+      "text" => "おめでとう♪誕生日プレゼントを受け取りますか？",
       "actions" => [
           [
-            "type" => "postback",
-            "label" => "予約する",
-            "data" => "action=buy&itemid=123"
-          ],
-          [
-            "type" => "postback",
-            "label" => "電話する",
-            "data" => "action=pcall&itemid=123"
-          ],
-          [
-            "type" => "uri",
-            "label" => "詳しく見る",
-            "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
-          ],
-          [
             "type" => "message",
-            "label" => "違うやつ",
-            "text" => "違うやつお願い"
+            "label" => "受け取る",
+            "text" => "受け取る"
           ]
       ]
     ]
