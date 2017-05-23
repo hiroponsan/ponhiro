@@ -21,7 +21,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image5.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
             "title" => "ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
@@ -45,9 +45,9 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
             "title" => "ヒロポンはどれ??",
-            "text" => "B.",
+            "text" => "C.",
             "actions" => [
               [
                   "type" => "message",
@@ -57,14 +57,14 @@ if ($text == 'はい') {
             ]
           ],
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image3.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image4.jpeg",
             "title" => "ヒロポンはどれ??",
-            "text" => "C.",
+            "text" => "D.",
             "actions" => [
               [
                   "type" => "message",
                   "label" => "選択",
-                  "text" => "C."
+                  "text" => "全てひろぽん♪"
               ]
             ]
           ]
