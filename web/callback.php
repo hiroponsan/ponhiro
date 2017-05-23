@@ -21,7 +21,7 @@ if ($text == 'はい') {
       "type" => "carousel",
       "columns" => [
           [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image1.jpeg",
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
             "title" => "ヒロポンはどれ??",
             "text" => "A.",
             "actions" => [
@@ -41,6 +41,18 @@ if ($text == 'はい') {
                   "type" => "message",
                   "label" => "選択",
                   "text" => "B."
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image2.jpeg",
+            "title" => "ヒロポンはどれ??",
+            "text" => "B.",
+            "actions" => [
+              [
+                  "type" => "message",
+                  "label" => "選択",
+                  "text" => "C."
               ]
             ]
           ],
@@ -155,6 +167,82 @@ if ($text == 'はい') {
       ]
     ]
   ]; 
+} else if ($text == '最高！' or "出直してこい♪" or "まあまあかな" ) {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "メルカリで売られたのは",
+    "template" => [
+      "type" => "carousel",
+      "columns" => [
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image7.jpeg",
+            "title" => "●●レストラン",
+            "text" => "こちらにしますか？",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=111"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=111"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-2.jpg",
+            "title" => "▲▲レストラン",
+            "text" => "それともこちら？（２つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=222"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=222"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ],
+          [
+            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/img2-3.jpg",
+            "title" => "■■レストラン",
+            "text" => "はたまたこちら？（３つ目）",
+            "actions" => [
+              [
+                  "type" => "postback",
+                  "label" => "予約する",
+                  "data" => "action=rsv&itemid=333"
+              ],
+              [
+                  "type" => "postback",
+                  "label" => "電話する",
+                  "data" => "action=pcall&itemid=333"
+              ],
+              [
+                  "type" => "uri",
+                  "label" => "詳しく見る（ブラウザ起動）",
+                  "uri" => "https://" . $_SERVER['SERVER_NAME'] . "/"
+              ]
+            ]
+          ]
+      ]
+    ]
+  ];
 } else {
   $response_format_text = [
     "type" => "template",
