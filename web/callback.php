@@ -123,51 +123,6 @@ if ($text == 'はい') {
       ]
     ]
   ];
-} else if ($text == '最高！') {
-  "type" => "template",
-    "altText" => "正解！ 最終問題. メルカリで出品されていたのは？",
-    "template" => [
-      "type" => "carousel",
-      "columns" => [
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "A.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "A."
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image6.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "B.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "B."
-              ]
-            ]
-          ],
-          [
-            "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/image5.jpeg",
-            "title" => "ヒロポンはどれ??",
-            "text" => "C.",
-            "actions" => [
-              [
-                  "type" => "message",
-                  "label" => "選択",
-                  "text" => "C."
-              ]
-            ]
-          ]
-      ]
-    ]
-  ];
 } else {
   $response_format_text = [
     "type" => "template",
