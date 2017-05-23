@@ -167,7 +167,7 @@ if ($text == 'はい') {
       ]
     ]
   ]; 
-} else if ($text == '最高！') {
+} else if ($text == '最高！' or $text == 'まあまあかな' or $text == 'ちょっと微妙や。。' or $text == '出直してこい♪') {
   $response_format_text = [
     "type" => "template",
     "altText" => "メルカリで売られたのは",
