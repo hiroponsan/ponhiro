@@ -231,6 +231,24 @@ if ($text == 'はい') {
       ]
     ]
   ];
+} else if ($text == '受け取る') {
+  $response_format_text = [
+    "type" => "template",
+    "altText" => "こちらの〇〇はいかがですか？",
+    "template" => [
+      "type" => "buttons",
+      "thumbnailImageUrl" => "https://" . $_SERVER['SERVER_NAME'] . "/present.png",
+      "title" => "",
+      "text" => "",
+      "actions" => [
+          [
+            "type" => "postback",
+            "label" => "",
+            "data" => "action=pcall&itemid=123"
+          ]
+      ]
+    ]
+  ];
 } else {
   $response_format_text = [
     "type" => "template",
